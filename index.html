@@ -1,7 +1,17 @@
 <!doctype html>
 <html lang="en"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/>
 <title>EcoVoyage — Eco-Friendly Travel Booking</title>
-<link rel="stylesheet" href="style.css"/></head>
+<link rel="stylesheet" href="style.css"/>
+  <script src="https://cdn.onesignal.com/sdks/web/v16/OneSignalSDK.page.js" defer></script>
+<script>
+  window.OneSignalDeferred = window.OneSignalDeferred || [];
+  OneSignalDeferred.push(async function(OneSignal) {
+    await OneSignal.init({
+      appId: "1de0c411-17e4-4587-8527-5bdc398b3cfd",
+    });
+  });
+</script>
+</head>
 <body>
 
 <header class="navbar">
