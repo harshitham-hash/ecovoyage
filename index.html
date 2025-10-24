@@ -34,6 +34,16 @@
   const app = initializeApp(firebaseConfig);
   const analytics = getAnalytics(app);
 </script>
+  <script>
+  function logEvent() {
+    firebase.analytics().logEvent('deal_click', {
+      deal_type: 'Weekend Discount',
+      page: 'Deals Page'
+    });
+  }
+</script>
+<button onclick="logEvent()">View Deal</button>
+
 </head>
 <body>
 
@@ -61,6 +71,9 @@
       <div style="display:flex;gap:.6rem;margin:.8rem 0 0">
         <a class="btn btn-primary" href="packages.html">Explore Packages</a>
         <a class="btn btn-soft" href="destinations.html">Find Destinations</a>
+        <button onclick="firebase.analytics().logEvent('deal_click')">
+  View Deal
+</button>
       </div>
       <div class="kpi">
         <div class="item"><div><strong>1,200+</strong> certified stays</div><small class="sub">audited annually</small></div>
